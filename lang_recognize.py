@@ -11,7 +11,7 @@ class LanguageIdentification:
         predictions = self.model.predict(text, k=1) # returns top 2 matching languages
         return predictions
 
-if __name__ == '__main__':
-    LANGUAGE = LanguageIdentification()
-    lang = LANGUAGE.predict_lang("Dzień dobry")
-    print(f'Language of given text is {stl.get_lang_name(lang[0][0][-2:])} with probability of {int(round(lang[1][0], 2)*100)}%')
+#if __name__ == '__main__':
+#    LANGUAGE = LanguageIdentification()
+#    lang = LANGUAGE.predict_lang("Dzień dobry")
+#    print(f'Language of given text is {stl.get_lang_name(lang[0][0][-2:])} with probability of {int(round(lang[1][0], 2)*100)}%')
