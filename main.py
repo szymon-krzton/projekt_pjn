@@ -32,6 +32,7 @@ def sentiment_analysis(posts):
 
     for post in posts:
         # scores.append(sa.polarity_scores(post)['compound'])
+        post = post.replace("\n", "")
         lang = lr.predict_lang(post)
         scores.append(f'{int(round(lang[1][0], 2)*100)}%')
         language.append(stl.get_lang_name(lang[0][0][-2:]))
